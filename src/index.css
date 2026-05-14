@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+}
+
+.bg-grid {
+  background-image: linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.dark .bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+}
+
+.brutal-border {
+  @apply border-2 border-black;
+}
+
+.brutal-shadow {
+  @apply shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+}
+
+.brutal-shadow-hover {
+  @apply hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all;
+}
+
+.brutal-btn {
+  @apply brutal-border brutal-shadow brutal-shadow-hover font-bold px-4 py-2 bg-white flex items-center justify-center;
+}
+
+/* --- Dark Mode Theme Color Fixes --- */
+
+/* Fix black borders to be visible on dark backgrounds */
+.dark .border-black {
+  border-color: #f3f4f6 !important;
+}
+
+/* Fix hardcoded black shadows to be white/light-gray in dark mode */
+.dark .shadow-\[2px_2px_0_#000\],
+.dark .shadow-\[2px_2px_0px_0px_rgba\(0\,0\,0\,1\)\] {
+  box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark .shadow-\[4px_4px_0px_0px_rgba\(0\,0\,0\,1\)\] {
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark .shadow-\[6px_6px_0px_0px_rgba\(0\,0\,0\,1\)\] {
+  box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark .shadow-\[8px_8px_0px_0px_rgba\(0\,0\,0\,1\)\] {
+  box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ensure bright colored cards/badges keep black text in dark mode (preventing white text on bright background) */
+.dark .bg-yellow-200,
+.dark .bg-yellow-300,
+.dark .bg-yellow-400,
+.dark .bg-\[\#fcd02c\],
+.dark .bg-pink-300,
+.dark .bg-pink-400,
+.dark .bg-purple-300,
+.dark .bg-green-300,
+.dark .bg-teal-400,
+.dark .bg-blue-300,
+.dark .bg-blue-400,
+.dark .bg-\[\#5ce1e6\],
+.dark .bg-\[\#aee6d0\],
+.dark .bg-\[\#7db4ea\] {
+  color: #000 !important;
+}
+
+/* Projects card background offset dark mode adaptation */
+.dark .group-hover\:translate-x-4 {
+  /* No change needed for offsets, just text and borders fixed by above rules */
+}
