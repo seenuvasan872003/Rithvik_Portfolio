@@ -29,9 +29,9 @@ const Hero = () => {
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight break-words">
                     RITHVIK D
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-lg">
+                {/* <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-lg">
                     Proactive and analytical MSc Business Analysis and Consulting graduate with a strong foundation in financial modelling, business process improvement, and data analytics. Experienced in sales analysis, SAP FICO consulting, and business analysis internships, with hands-on exposure to real-world data-driven decision-making and stakeholder collaboration. Actively seeking Digital Marketing Analyst, Sales Analyst, and Business Analyst opportunities in global markets.
-                </p>
+                </p> */}
 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-8">
                     <button className="bg-[#5ce1e6] border-2 border-black px-6 py-3 font-bold text-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-none transition-all w-full sm:w-auto">
